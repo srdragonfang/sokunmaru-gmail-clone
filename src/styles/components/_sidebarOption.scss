@@ -1,0 +1,39 @@
+@use '../global/' as g;
+
+.SidebarOption {
+  @include g.flexbox(row, center, none);
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  color: #818181;
+  & h3 {
+    flex: 1;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  & p {
+    display: none;
+    font-weight: 400;
+  }
+  &:hover {
+    background-color: #fcecec;
+    color: #c04b37;
+    font-weight: 800 !important;
+    & p {
+      display: inline;
+    }
+  }
+}
+.SidebarOption--active {
+  background-color: #fcecec;
+  color: #c04b37;
+  font-weight: 800 !important;
+  & p {
+    display: inline !important;
+    font-weight: 600 !important;
+  }
+}
+.react-icons {
+  background-color: transparent;
+}

@@ -1,0 +1,95 @@
+@use '../global/' as g;
+
+.SideLeft {
+	height: 100%;
+	background-color: white;
+	@include g.flexbox(column, none, space-between);
+	&-center {
+		padding: 1rem 0.5rem 1rem 0;
+		@include g.flexbox(column, none, flex-start);
+        
+		& Button {
+			@include g.center-center;
+			padding: 0.5rem 1rem;
+			margin-left: 0.5rem;
+			border-radius: 30px !important;
+			width: max-content;
+			outline: unset;
+			border: unset;
+			font-weight: 600;
+			color: gray;
+			box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.75);
+			margin-bottom: 1rem;
+		}
+		& .option-list {
+			@include g.flexbox(column, none, flex-start);
+			height: 230px;
+			overflow-y: auto;
+			& .option-item {
+				@include g.flexbox(row, center, space-between);
+				padding: 0.2rem 0.5rem 0.2rem 1.5rem;
+				cursor: pointer;
+				& h4 {
+					font-weight: 500;
+				}
+				& .number {
+					font-weight: 500;
+				}
+				&:hover {
+					background: lightgray;
+					border-radius: 0 15px 15px 0;
+				}
+			}
+		}
+	}
+	&-bottom {
+		@include g.flexbox(column, none, none);
+		flex: 1;
+		& .meet {
+			padding: 1rem 0.5rem 1rem 0;
+			border-top: 1px solid gray;
+			@include g.flexbox(column, none, space-around);
+			& h3 {
+				padding: 0.2rem 0.5rem 0.2rem 1.5rem;
+			}
+			&-item {
+				@include g.flexbox(row, center, flex-start);
+				padding: 0.2rem 0.5rem 0.2rem 1.5rem;
+				cursor: pointer;
+				& h4 {
+					font-weight: 500;
+				}
+				&:hover {
+					background: lightgray;
+					border-radius: 0 15px 15px 0;
+				}
+			}
+		}
+		& .hangout {
+			border-top: 1px solid gray;
+			@include g.flexbox(column, none, space-around);
+			padding: 1rem 0.5rem 1rem 1.5rem;
+			& h3 {
+				padding: 0.2rem 0.5rem 0.2rem 0;
+			}
+			& button {
+				background-color: rgb(1, 1, 56);
+				width: 100%;
+				color: #fff;
+				padding: 0.4rem 0;
+				outline: unset;
+				border: unset;
+				font-weight: 600;
+				border-radius: 15px;
+			}
+		}
+		& .contact {
+			@include g.center-center;
+			border-top: 1px solid gray;
+		}
+	}
+}
+.active {
+	background: lightgray !important;
+	border-radius: 0 15px 15px 0 !important;
+}
