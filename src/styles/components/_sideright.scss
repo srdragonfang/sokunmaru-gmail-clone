@@ -1,0 +1,12 @@
+@use '../global/' as g;
+
+.SideRight {
+    height: 100%;
+    padding: 1.5rem 0;
+    background-color: white;
+    @include g.flexbox(column, center, space-between);
+
+  &-options {
+    @include g.flexbox(column, center, flex-start);
+  }
+}

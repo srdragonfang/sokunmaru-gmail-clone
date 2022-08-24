@@ -1,0 +1,23 @@
+@use '../global/' as g;
+
+.emailRow {
+    width: 100%;
+    @include g.flexbox(row, center, flex-start);
+    font-size: 1.4rem;
+    padding: 1rem 1rem 1rem 0;
+    gap: 20px;
+    border: 1px solid whitesmoke;
+    
+    &__content {
+        flex: 1;
+        cursor: pointer;
+        @include g.flexbox(row, center, flex-start);
+
+        &--title {
+            width: 200px;
+        }
+        &--message {
+            flex: 1;
+        }
+    }
+}

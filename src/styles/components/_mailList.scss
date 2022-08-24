@@ -1,0 +1,22 @@
+@use '../global/' as g;
+
+.emailList {
+    height: 100%;
+    overflow: scroll;
+    &__settings {
+
+        background-color: #fff;
+        position: sticky;
+        top: 0;
+        border-bottom: 1px solid whitesmoke;
+        z-index: 999;
+        @include g.flexbox(row, center, space-between);
+    }
+    
+    &__sections {
+        @include g.flexbox(row, center, flex-start);
+    }
+    &__list {
+        @include g.flexbox(column, flex-start, flex-start);
+    }
+}

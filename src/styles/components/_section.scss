@@ -1,0 +1,19 @@
+@use '../global/' as g;
+
+.section {
+    // width: 80px;
+    padding: 1.5rem;
+    font-size: 2rem;
+    // flex: 1;
+    gap: 1rem;
+    cursor: pointer;
+    @include g.flexbox(row, center, center);
+}
+
+.section:hover{
+    background-color: whitesmoke;
+}
+
+.section--selected {
+    background-color: whitesmoke;
+}

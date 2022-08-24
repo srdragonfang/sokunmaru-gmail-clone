@@ -1,7 +1,7 @@
 @use '../global/' as g;
 
 .post {
+    width: 100%;
     flex: 1;
-    background-color: beige;
     @include g.flexbox(row, flex-start, flex-start)
 }

@@ -1,0 +1,29 @@
+@use '../global/' as g;
+
+.email {
+    width: 100%;
+    height: 100%;
+    @include g.flexbox(column, flex-start, flex-start);
+
+	&__tools {
+        width: 100%;
+        padding: 1rem;
+        border-bottom: 3px solid whitesmoke;
+		@include g.flexbox(row, center, space-between);
+	}
+    
+	&__body {
+        width: 100%;
+        // background-color: sienna;
+        flex: 1;
+        margin: 3rem;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+		&--header {
+            padding: 1rem;
+			border-bottom: 3px solid whitesmoke;
+            gap: 3rem;
+			@include g.flexbox(row, center, flex-start);
+		}
+	}
+}
