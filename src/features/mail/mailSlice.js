@@ -1,8 +1,8 @@
-import {createSlide} from '@reduxjs/toolkit'
+import {createSlice} from '@reduxjs/toolkit'
 
 export const mailSlice = createSlice({
     name: "mail",
-    initiaState: {
+    initialState: {
         sendMessageIsOpen: false,
     },
     reducers: {
@@ -16,8 +16,8 @@ export const mailSlice = createSlice({
 
 })
 
-export const {openSendMessage, closeSendMessage} = mailsSlice.actions
+export const {openSendMessage, closeSendMessage} = couterSlice.actions
 
-export const selectMail = (state) => state.mail.value;
+export const selectMail = (state) => state.mail.openSendMessage;
 
 export default mailSlice.reducer;
