@@ -1,1 +1,0 @@
-overfolow-wrap: break-work;
