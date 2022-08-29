@@ -16,7 +16,7 @@ export const mailSlice = createSlice({
 
 })
 
-export const {openSendMessage, closeSendMessage} = couterSlice.actions
+export const {openSendMessage, closeSendMessage} = mailSlice.actions
 
 export const selectMail = (state) => state.mail.openSendMessage;
 
